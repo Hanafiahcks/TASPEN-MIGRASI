@@ -957,6 +957,6 @@ USIA2001 = CASE WHEN YEAR(TMT_TASPEN) >  2001 THEN
         END ,
 JMLISTRI = TO_INT(SUBSTRING(KDJIWA_AKTIF,2,1)),
 JMLANAK = TO_INT(SUBSTRING(KDJIWA_AKTIF,4,1)),
-NO_URUT =ROW_NUMBER() OVER(partition by blthgaji,notas order by blthgaji,notas)
+NO_URUT =ROW_NUMBER() OVER(partition by notas order by blthgaji,notas)
 ;
 
